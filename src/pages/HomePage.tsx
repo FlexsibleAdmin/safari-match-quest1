@@ -21,7 +21,7 @@ export function HomePage() {
   useEffect(() => {
     startGame();
     return () => resetGame();
-  }, []); // Empty dependency array = run once on mount
+  }, [startGame, resetGame]); // Added dependencies to satisfy lint rule
   // Timer logic
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
@@ -47,30 +47,30 @@ export function HomePage() {
   return (
     <AppLayout container={false} className="bg-jungle-pattern min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12 flex flex-col items-center">
-        <GameHeader 
-          moves={moves} 
-          timer={timer} 
-          onRestart={startGame} 
+        <GameHeader
+          moves={moves}
+          timer={timer}
+          onRestart={startGame}
         />
         <main className="w-full max-w-4xl">
           <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4 md:gap-6 mx-auto">
             {cards.map((card) => (
-              <Card 
-                key={card.id} 
-                card={card} 
-                onClick={flipCard} 
+              <Card
+                key={card.id}
+                card={card}
+                onClick={flipCard}
               />
             ))}
           </div>
         </main>
-        <VictoryModal 
-          isOpen={status === 'won'} 
-          moves={moves} 
-          timer={timer} 
-          onRestart={startGame} 
+        <VictoryModal
+          isOpen={status === 'won'}
+          moves={moves}
+          timer={timer}
+          onRestart={startGame}
         />
         <footer className="mt-12 text-center text-slate-400 text-sm font-medium">
-          <p>Built with ❤️ by Aurelia | Safari Match Quest</p>
+          <p>Built with ❤��� by Aurelia | Safari Match Quest</p>
         </footer>
       </div>
     </AppLayout>
