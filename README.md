@@ -1,6 +1,6 @@
 # Safari Match Quest
 
-[aureliabutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/FlexsibleAdmin/safari-match-quest1)
 
 A vibrant, kid-friendly memory matching game set in a playful jungle environment. This application features a grid of interactive cards that players flip to find matching pairs of cute animal characters, built with a focus on visual excellence and smooth interactivity.
 
@@ -84,7 +84,7 @@ This project is configured for deployment on Cloudflare Workers.
 
 You can deploy this project immediately using the button below:
 
-[aureliabutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/FlexsibleAdmin/safari-match-quest1)
 
 ### Manual Deployment
 
